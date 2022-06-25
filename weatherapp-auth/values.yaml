@@ -5,7 +5,7 @@
 replicaCount: 2
 
 image:
-  repository: afakharany/weatherapp-auth
+  repository: lawrencedevops/weatherapp-auth
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: ""
