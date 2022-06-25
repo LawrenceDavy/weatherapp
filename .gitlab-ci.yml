@@ -10,7 +10,7 @@ build:
     - docker:dind
   before_script:
     - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY
-    #docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD"
+    ##docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD"
   script:
     - cd auth
     - docker build -t $CI_REGISTRY_USER/weatherapp-auth . --no-cache
