@@ -9,7 +9,7 @@ RUN go build -o /go/bin/app -v ./...
 #final stage
 FROM alpine:latest
 RUN apk --no-cache add ca-certificates
-COPY --from=builder /go/bin/app /app
+COPY --from=build /go/bin/app /app
 ENTRYPOINT /app
 LABEL Name=auth Version=0.0.1
 EXPOSE 8080
